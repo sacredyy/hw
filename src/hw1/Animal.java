@@ -1,3 +1,4 @@
+package hw1;
 
 public class Animal {
     public String ration;
@@ -37,7 +38,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "hw1.Animal{" +
                 "ration='" + ration + '\'' +
                 ", color='" + color + '\'' +
                 ", weight=" + weight +
@@ -53,6 +54,6 @@ public class Animal {
     }
 
     public void sleep(){
-        System.out.println("Animal sleep");
+        System.out.println("hw1.Animal sleep");
     }
 }

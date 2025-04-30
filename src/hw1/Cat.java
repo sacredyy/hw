@@ -1,7 +1,10 @@
-public class Dog extends Animal{
+package hw1;
+
+public class Cat extends Animal{
     String name;
 
-    public Dog(String ration, String color, int weight, String name) {
+
+    public Cat(String ration, String color, int weight, String name) {
         super(ration, color, weight);
         this.name = name;
     }
@@ -15,23 +18,23 @@ public class Dog extends Animal{
     }
 
     @Override
-    public void sleep() {
-        System.out.println("Dog " + this.name + " sleep");
+    public String getVoice() {
+        return "Meow";
     }
 
     @Override
     public void eat() {
-        System.out.println("Dog " + this.name + " eat");
+        System.out.println("hw1.Cat eats");
     }
 
     @Override
-    public String getVoice() {
-        return "woof";
+    public void sleep() {
+        System.out.println("hw1.Cat sleep");
     }
 
     @Override
     public String toString() {
-        return "Dog{" +
+        return "hw1.Cat{" +
                 "name='" + name + '\'' +
                 ", ration='" + ration + '\'' +
                 ", color='" + color + '\'' +

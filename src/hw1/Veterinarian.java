@@ -1,3 +1,5 @@
+package hw1;
+
 public class Veterinarian {
     String name;
 
@@ -21,7 +23,7 @@ public class Veterinarian {
 
     @Override
     public String toString() {
-        return "Veterinarian{" +
+        return "hw1.Veterinarian{" +
                 "name='" + name + '\'' +
                 '}';
     }
