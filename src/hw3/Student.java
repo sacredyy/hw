@@ -4,7 +4,7 @@ public class Student extends Human{
     public int id;
     String groupName;
 
-    public Student(String name, String lastName, Gender gender, int id, String groupName) {
+    public Student(String name, String lastName, Gender gender, int id) {
         super(name, lastName, gender);
         this.id = id;
         this.groupName = groupName;

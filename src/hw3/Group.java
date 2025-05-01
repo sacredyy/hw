@@ -27,6 +27,7 @@ public class Group {
         for (int i = 0; i < students.length; i++) {
             if (students[i] == null) {
                 students[i] = student;
+                students[i].setGroupName(this.groupName);
                 return;
             }
         }
