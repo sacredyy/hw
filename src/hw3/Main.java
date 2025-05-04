@@ -11,7 +11,7 @@ public class Main {
             it.addStudent(student3);
             it.addStudent(student4);
         } catch (GroupOverflowException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         System.out.println(it.toString());
         Student student2 = new Student("Jon", "Weak", Gender.MALE, 2);
@@ -19,7 +19,7 @@ public class Main {
         try {
             it.searchStudentByLastName("Weak");
         } catch (StudentNotFoundException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 }
