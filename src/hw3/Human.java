@@ -1,9 +1,9 @@
 package hw3;
 
 public class Human {
-    public String name;
-    public String lastName;
-    public Gender gender;
+    private String name;
+    private String lastName;
+    private Gender gender;
 
     public Human(String name, String lastName, Gender gender) {
         super();

@@ -2,7 +2,7 @@ package hw3;
 
 public class Student extends Human{
     public int id;
-    String groupName;
+    private String groupName;
 
     public Student(String name, String lastName, Gender gender, int id) {
         super(name, lastName, gender);
@@ -31,14 +31,15 @@ public class Student extends Human{
         this.groupName = groupName;
     }
 
+
     @Override
     public String toString() {
         return "Student{" +
                 "id=" + id +
                 ", groupName='" + groupName + '\'' +
-                ", name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", gender=" + gender +
+                ", name='" + getName() + '\'' +
+                ", lastName='" + getLastName() + '\'' +
+                ", gender=" + getGender() +
                 '}';
     }
 }

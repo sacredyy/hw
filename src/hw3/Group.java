@@ -3,8 +3,8 @@ package hw3;
 import java.util.Arrays;
 
 public class Group {
-    String groupName;
-    Student[] students;
+    private String groupName;
+    private Student[] students;
 
     public Group(String groupName) {
         this.groupName = groupName;
