@@ -11,6 +11,9 @@ public class Animal {
         this.color = color;
         this.weight = weight;
     }
+    public Animal(){
+        super();
+    }
 
     public String getRation() {
         return ration;

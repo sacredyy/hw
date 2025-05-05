@@ -1,7 +1,7 @@
 package hw1;
 
 public class Veterinarian {
-    String name;
+    private String name;
 
     public Veterinarian(String name) {
         super();
