@@ -38,10 +38,10 @@ public class Dog extends Animal{
     @Override
     public String toString() {
         return "hw1.Dog{" +
-                "name='" + name + '\'' +
-                ", ration='" + ration + '\'' +
-                ", color='" + color + '\'' +
-                ", weight=" + weight +
+                "name='" + name + getName() +
+                ", ration='" + ration + getRation() +
+                ", color='" + color + getColor() +
+                ", weight=" + weight + getWeight() +
                 '}';
     }
 }
