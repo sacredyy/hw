@@ -7,20 +7,20 @@ public class Main {
         Veterinarian Alex = new Veterinarian("");
         System.out.println(cat.toString());
         System.out.println(dog.toString());
-//
-//        cat.eat();
-//        dog.eat();
-//
-//        cat.sleep();
-//        dog.sleep();
-//
-//        cat.getVoice();
-//        dog.getVoice();
-//
-//
-//        Alex.toString();
-//        Alex.treatment(cat);
 
-//        Alex.treatment(dog);
+        cat.eat();
+        dog.eat();
+
+        cat.sleep();
+        dog.sleep();
+
+        cat.getVoice();
+        dog.getVoice();
+
+
+        Alex.toString();
+        Alex.treatment(cat);
+
+        Alex.treatment(dog);
     }
 }
