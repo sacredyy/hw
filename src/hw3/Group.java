@@ -1,6 +1,7 @@
 package hw3;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Group {
     private String groupName;
@@ -57,12 +58,16 @@ public class Group {
         return false;
     }
 
+    public void sortStudentsByLastName(){
+        Arrays.sort(students, Comparator.nullsFirst(new StudentsLastNameComparator()));
+    }
+
     @Override
     public String toString() {
         String res = "Students in group: " + System.lineSeparator();
         for (int i = 0; i < students.length; i++) {
             if (students[i] != null){
-                res += students[i];
+                res += students[i] + "\n";
             }
         }
         return res;
