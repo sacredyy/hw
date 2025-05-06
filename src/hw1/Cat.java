@@ -38,11 +38,11 @@ public class Cat extends Animal{
 
     @Override
     public String toString() {
-        return "hw1.Cat{" +
-                "name='" + name + getName() +
-                ", ration='" + ration + getRation() +
-                ", color='" + color + getColor() +
-                ", weight=" + weight + getWeight() +
+        return "Cat{" +
+                "name='" + name + '\'' +
+                ", ration='" + ration + '\'' +
+                ", color='" + color + '\'' +
+                ", weight=" + weight +
                 '}';
     }
 }
