@@ -12,6 +12,11 @@ public class Main {
         Student student6 = new Student("Entoni", "Leclerk", Gender.FEMALE, 6);
         Student student7 = new Student("Oscar", "Piastri", Gender.FEMALE, 7);
         try {
+            studentKeyboard.createStudentFromKeyboard(it);
+        } catch (GroupOverflowException e) {
+            e.printStackTrace();
+        }
+        try {
             it.addStudent(student1);
             it.addStudent(student3);
             it.addStudent(student4);
