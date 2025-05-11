@@ -1,7 +1,7 @@
 package hw3;
 
 public class Student extends Human{
-    public int id;
+    private int id = 0;
     private String groupName;
 
     public Student(String name, String lastName, Gender gender, int id) {

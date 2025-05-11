@@ -1,10 +1,14 @@
 package hw3;
 
-import java.util.Arrays;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
         Group it = new Group("it");
+        Group it2 = new Group("it2");
         Student student1 = new Student("Alex", "Wayne", Gender.MALE, 1);
         Student student3 = new Student("Robert", "Fox", Gender.MALE, 3);
         Student student4 = new Student("Nika", "Brane", Gender.FEMALE, 4);
@@ -36,5 +40,19 @@ public class Main {
         System.out.println(it.toString());
         it.sortStudentsByLastName();
         System.out.println(it.toString());
+        try {
+            GroupFileStorage.saveGroupToCSV(it);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        File fileGroup = new File("it.csv");
+        try {
+            System.out.println(GroupFileStorage.loadGroupFromCSV(it2, fileGroup));
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        File workFolder = new File("/home/kevin/Documents/IdeaProjects/hw");
+        File filex = GroupFileStorage.findFileByGroupName("zxc", workFolder);
+        System.out.println(filex);
     }
 }
