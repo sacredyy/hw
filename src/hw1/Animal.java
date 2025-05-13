@@ -1,9 +1,9 @@
 package hw1;
 
 public class Animal {
-    public String ration;
-    public String color;
-    public int weight;
+    private String ration;
+    private String color;
+    private int weight;
 
     public Animal(String ration, String color, int weight) {
         super();

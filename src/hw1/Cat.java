@@ -40,9 +40,9 @@ public class Cat extends Animal{
     public String toString() {
         return "Cat{" +
                 "name='" + name + '\'' +
-                ", ration='" + ration + '\'' +
-                ", color='" + color + '\'' +
-                ", weight=" + weight +
+                ", ration='" + getRation() + '\'' +
+                ", color='" + getColor() + '\'' +
+                ", weight=" + getWeight() +
                 '}';
     }
 }
