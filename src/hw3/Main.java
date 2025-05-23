@@ -13,8 +13,10 @@ public class Main {
         Student student3 = new Student("Robert", "Fox", Gender.MALE, 3);
         Student student4 = new Student("Nika", "Brane", Gender.FEMALE, 4);
         Student student5 = new Student("Bruice", "Hamilton", Gender.FEMALE, 5);
-        Student student6 = new Student("Entoni", "Leclerk", Gender.FEMALE, 6);
+        Student student6 = new Student("Oscar", "Piastri", Gender.FEMALE, 7);
         Student student7 = new Student("Oscar", "Piastri", Gender.FEMALE, 7);
+
+
         try {
             studentKeyboard.createStudentFromKeyboard(it);
         } catch (GroupOverflowException e) {
@@ -29,6 +31,11 @@ public class Main {
             it.addStudent(student7);
         } catch (GroupOverflowException e) {
             e.printStackTrace();
+        }
+        if (it.hasDuplicate()) {
+            System.out.println("There are the same students");
+        } else {
+            System.out.println("There are not the same students");
         }
 
         System.out.println(it.removeStudentByID(1));
@@ -51,6 +58,7 @@ public class Main {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+
         File workFolder = new File("/home/kevin/Documents/IdeaProjects/hw");
         File filex = GroupFileStorage.findFileByGroupName("zxc", workFolder);
         System.out.println(filex);

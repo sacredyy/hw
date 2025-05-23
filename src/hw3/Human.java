@@ -1,5 +1,7 @@
 package hw3;
 
+import java.util.Objects;
+
 public class Human {
     private String name;
     private String lastName;
@@ -38,6 +40,17 @@ public class Human {
 
     public void setGender(Gender gender) {
         this.gender = gender;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Human human)) return false;
+        return Objects.equals(name, human.name) && Objects.equals(lastName, human.lastName) && gender == human.gender;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, lastName, gender);
     }
 
     @Override

@@ -1,11 +1,14 @@
 package hw3;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Objects;
 
 public class Group {
     private String groupName;
-    private Student[] students;
+    private static Student[] students;
+//    List<Student> list1 = new ArrayList<>;
 
     public Group(String groupName) {
         this.groupName = groupName;
@@ -60,6 +63,29 @@ public class Group {
 
     public void sortStudentsByLastName(){
         Arrays.sort(students, Comparator.nullsFirst(new StudentsLastNameComparator()));
+    }
+
+    public boolean hasDuplicate(){
+        for (int i = 0; i < students.length; i++) {
+            if (students[i] != null) {
+                for (int j = i + 1; j <students.length; j++) {
+                    if (students[j] != null && students[i].equals(students[j])){
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Group group)) return false;
+        return Objects.equals(groupName, group.groupName) && Objects.deepEquals(students, group.students);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(groupName, Arrays.hashCode(students));
     }
 
     @Override

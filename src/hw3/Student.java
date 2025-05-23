@@ -1,5 +1,7 @@
 package hw3;
 
+import java.util.Objects;
+
 public class Student extends Human{
     private int id = 0;
     private String groupName;
@@ -31,6 +33,20 @@ public class Student extends Human{
         this.groupName = groupName;
     }
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Student student = (Student) o;
+        return getId() == student.getId() && Objects.equals(getGroupName(), student.getGroupName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), getId(), getGroupName());
+
+    }
 
     @Override
     public String toString() {
