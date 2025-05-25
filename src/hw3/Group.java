@@ -8,7 +8,6 @@ import java.util.Objects;
 public class Group {
     private String groupName;
     private static Student[] students;
-//    List<Student> list1 = new ArrayList<>;
 
     public Group(String groupName) {
         this.groupName = groupName;
