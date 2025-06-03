@@ -42,7 +42,6 @@ public class Student extends Human{
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), getId(), getGroupName());
-
     }
 
     @Override

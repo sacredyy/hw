@@ -27,6 +27,7 @@ public class Group {
     public void addStudent(Student student) throws GroupOverflowException{
         if (studentsList.size() <= placesInGroup) {
             studentsList.add(student);
+            student.setGroupName(groupName);
         } else {
             throw new GroupOverflowException("There is no space for new student");
         }
