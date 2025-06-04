@@ -10,6 +10,7 @@ public class Main {
     public static void main(String[] args) {
         String spec = "https://dou.ua/";
         String outputFile = "links.txt";
+
         try {
             List<String> links = getLinksFromUrl(spec, "UTF-8");
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile))) {
@@ -17,7 +18,7 @@ public class Main {
                     writer.write(link);
                     writer.newLine();
                 }
-                System.out.println("succes");
+                System.out.println("succe");
             } catch (IOException e) {
                 e.printStackTrace();
             }
