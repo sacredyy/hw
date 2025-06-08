@@ -1,13 +1,24 @@
-package strimy.a;
+package strimy.f;
 
 import java.util.Objects;
 
-public class Cat{
+public class Cat {
     private String name;
     private int age;
-    public Cat(String name, int age){
+    private int weight;
+
+    public Cat(String name, int age, int weight) {
         this.name = name;
         this.age = age;
+        this.weight = weight;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 
     public String getName() {
